@@ -2,7 +2,9 @@ const TelegramBot = require('node-telegram-bot-api')
 const weather = require('./weather.js')
 const formatter_weather_data = require('./formatter-weather-data.js')
 
+
 const token = '5343486699:AAGDIZDVvV_qGmR-sSkVzGPcH9pOmLj1xWY'
+
 
 const bot = new TelegramBot(token, {polling: true})
 
