@@ -1,7 +1,7 @@
 const weather = require('./weather.js')
 
 const TelegramBot = require("node-telegram-bot-api")
-const token = '5343486699:AAGeSKoSmjoVKhyJZO0fj-22vq2QEspF5H8'
+const token = process.env.TOKEN
 
 const bot = new TelegramBot(token, {polling: true})
 
