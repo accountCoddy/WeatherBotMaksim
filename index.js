@@ -1,9 +1,9 @@
 const weather = require('./weather.js')
-
+require('dotenv').config()
 const TelegramBot = require("node-telegram-bot-api")
 const token = process.env.TOKEN
 
-const bot = new TelegramBot(token, {polling: false})
+const bot = new TelegramBot(token, {polling: true})
 
 async function get_data(city_name){
     let data = await weather.get_request(city_name)
