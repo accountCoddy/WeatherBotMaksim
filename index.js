@@ -3,7 +3,7 @@ const weather = require('./weather.js')
 const TelegramBot = require("node-telegram-bot-api")
 const token = process.env.TOKEN
 
-const bot = new TelegramBot(token, {polling: true})
+const bot = new TelegramBot(token, {polling: false})
 
 async function get_data(city_name){
     let data = await weather.get_request(city_name)
