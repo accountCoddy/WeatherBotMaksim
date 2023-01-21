@@ -3,7 +3,7 @@ require('dotenv').config()
 const TelegramBot = require("node-telegram-bot-api")
 const token = process.env.TOKEN
 
-const bot = new TelegramBot(token, {polling: {autoStart: false, interval: 1000}})
+const bot = new TelegramBot(token, {polling: false})
 
 async function get_data(city_name){
     let data = await weather.get_request(city_name)
